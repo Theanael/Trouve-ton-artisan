@@ -4,6 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const sequelize = require('./db/sequelize');
+
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connexion à MySQL réussie !');
+    })
+    .catch((error) => {
+        console.error('Impossible de se connecter à MySQL :', error);
+    });
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
