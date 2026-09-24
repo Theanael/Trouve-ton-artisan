@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Regular-Trial.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Medium-Trial.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('assets/fonts/Graphik-Bold-Trial.otf');
+    font-weight: 700;
+}
+
+body{
+    font-family: Graphik;
+}
+
+$primary: #0074c7;
+$secondary: #00497c;
+$success: #82b864;
+$danger: #cd2c2e;
+$dark: #384050;
+$light: #f1f8fc;
+
+// Import de Bootstrap
+@import "bootstrap/scss/bootstrap";
+
