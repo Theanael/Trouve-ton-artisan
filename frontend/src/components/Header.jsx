@@ -1,6 +1,6 @@
 
 function Header(props) {
-    const categories=props.categories ??['Alimentation','Bâtiment','Fabrication','Service']
+    const categories=props.categories ??['Alimentation','Batiment','Fabrication','Service']
 
   return (
     <header>
@@ -14,7 +14,7 @@ function Header(props) {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li><h2 className="h3 d-lg-none text-secondary">Catégories</h2></li>
+                    <li><h2 className="h3 d-lg-none text-secondary">Categories</h2></li>
                     {categories.map((category) => (
                         <li className="nav-link" key={category.id}>
                             <a className="nav-link fw-medium fs-5 p-0">{category.name}</a>

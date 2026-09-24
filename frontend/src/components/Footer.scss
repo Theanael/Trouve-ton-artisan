@@ -1,0 +1,16 @@
+.separator {
+    border: none;
+    padding-bottom: 2em;
+    border-bottom: 2px solid ;
+
+}
+
+@media (min-width: 992px) {
+    .separator {
+        border:none;
+        padding-right: 2em;
+        border-right: 2px solid #dee2e6;
+    }
+
+
+}
