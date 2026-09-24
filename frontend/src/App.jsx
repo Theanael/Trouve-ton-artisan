@@ -1,3 +1,4 @@
+import CraftsmanCard from './components/CraftsmanCard'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -16,19 +17,19 @@ function App() {
       name:"Au pain chaud",
       speciality:'Boulanger',
       localisation:'Montelimar',
-      note:3.3
+      note:4.8
     },
     {
       name:"Chocolaterie Labbe",
       speciality:'Chocolatier',
       localisation:'Lyon',
-      note:3.8
+      note:4.9
     },
     {
       name:"Orville Salmons",
       speciality:'Chauffagiste',
       localisation:'Evian',
-      note:3.5
+      note:5.0
     },
   ]
   
@@ -60,7 +61,9 @@ function App() {
         <section className='py-3'>
           <h2 className='h1 fw-bold text-secondary pb-2'>Artisans du Mois</h2>
           <div className='d-flex flex-wrap justify-content-center gap-3'>
-
+            <CraftsmanCard craftsman={craftsmen[0]}/>
+            <CraftsmanCard craftsman={craftsmen[1]}/>
+            <CraftsmanCard craftsman={craftsmen[2]}/>
           </div>
             
         </section>
