@@ -5,8 +5,13 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const sequelize = require('./db/MySQL')
 
-var app = express();
+
+const app = express();
+
+
+sequelize.initClientDbConnection()
 
 
 app.use(logger('dev'));
