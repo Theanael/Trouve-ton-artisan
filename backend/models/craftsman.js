@@ -37,6 +37,10 @@ const Speciality = sequelize.define('Speciality',{
         validate:{
             isUrl:true
         }
+    },
+    top:{
+        type:DataTypes.BOOLEAN,
+        allowNull:false
     }
 },
 {
