@@ -17,7 +17,7 @@ exports.getById =async(req,res) => {
         // On essaie de récupérer la catégorie et si elle n'existe pas on renvoie une erreur
         const category= await services.getById(id)
         if (!category) {
-            return res.status(404).json({message:'catway not found'})
+            return res.status(404).json({message:'category not found'})
         }        
 
         // On renvoie la catégorie
