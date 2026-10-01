@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import { Route, Routes } from 'react-router'
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
   return (
     <>
       <Header categories={categories} />
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+      </Routes>
       <Footer />
     </>
   )
