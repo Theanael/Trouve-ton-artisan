@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const {sequelize} = require('../db/MySQL')
 
-const Speciality = sequelize.define('Speciality',{
+const Craftsman = sequelize.define('Craftsman',{
     id:{
         type:DataTypes.INTEGER,
         autoIncrement: true,
@@ -39,12 +39,13 @@ const Speciality = sequelize.define('Speciality',{
         }
     },
     top:{
-        type:DataTypes.BOOLEAN,
+        type:DataTypes.BOOLEAN, 
         allowNull:false
     }
 },
 {
-    timestamps:false
+    timestamps:false,
+    tableName:'craftsmen'
 })
 
-module.exports=Speciality
+module.exports=Craftsman
