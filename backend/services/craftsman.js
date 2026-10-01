@@ -28,14 +28,13 @@ exports.getByCategory = async (categoryId) => {
             City,
             {
             model:Speciality,
-            include: {
-                model:Category,
-                required:true,
-                where:{id:categoryId}
-            }
+            required:true,
+            where:{id_category:categoryId}
             }
         ]
     });
+
+    
     return craftsmen;
 }
 

@@ -20,7 +20,7 @@ exports.getTop = async (req,res) => {
     try {
         const craftsmen= await services.getTop();
 
-        return craftsmen;
+        return res.status(200).json(craftsmen);
         
     } catch (error) {
         return res.status(500).json(error);
@@ -33,7 +33,7 @@ exports.getByCategory = async (req,res) => {
     try {
         const craftsmen = await services.getByCategory(idCategory);
 
-        return craftsmen;
+        return res.status(200).json(craftsmen);
 
         
     } catch (error) {

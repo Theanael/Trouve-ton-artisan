@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const categoryRoute = require('./category')
+const categoryRoute = require('./category');
+const craftsmanRoute = require('./craftsman');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,5 +10,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.use('/category',categoryRoute)
+router.use('/craftsman',craftsmanRoute)
 
 module.exports = router;
