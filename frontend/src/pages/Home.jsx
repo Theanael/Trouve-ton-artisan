@@ -1,29 +1,18 @@
+import { useState, useEffect } from 'react'
 import CraftsmanCard from '../components/CraftsmanCard'
 
 function Home() {
 
-  // Temp Static Top Craftsman
-  const craftsmen=[
-    {
-      name:"Au pain chaud",
-      speciality:'Boulanger',
-      localisation:'Montelimar',
-      note:4.8
-    },
-    {
-      name:"Chocolaterie Labbe",
-      speciality:'Chocolatier',
-      localisation:'Lyon',
-      note:4.9
-    },
-    {
-      name:"Orville Salmons",
-      speciality:'Chauffagiste',
-      localisation:'Evian',
-      note:5.0
-    },
-  ]
+  const [craftsmen,setCraftsmen] = useState([])
   
+  useEffect(() => {
+    fetch('http://localhost:3000/craftsman/top')
+      .then(response => response.json())
+      .then((data) => {
+        setCraftsmen(data)
+      })
+
+  },[]);
   return (
     <>
       <main >
@@ -52,7 +41,7 @@ function Home() {
           <h2 className='h1 fw-bold text-secondary pb-2'>Artisans du Mois</h2>
           <div className='d-flex flex-wrap justify-content-center gap-3'>
             {craftsmen.map((craftsman) => {
-                    return (<CraftsmanCard craftsman={craftsman} />)
+                    return (<CraftsmanCard craftsman={craftsman} key={craftsman.id}/>)
             })}
           </div>
             
