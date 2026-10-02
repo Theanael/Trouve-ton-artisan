@@ -11,11 +11,11 @@ function CraftsmanCard(props) {
           <StarNotes note={craftsman.note}/>
             <div className="d-flex gap-3 justify-content-center">
               <span className="h5 fw-bold text-secondary w-50 text-end">Specialite</span>
-              <span className="w-50">{craftsman.speciality}</span>
+              <span className="w-50">{craftsman.Speciality.name}</span>
             </div>
             <div className="d-flex gap-3 justify-content-center">
               <span className="h5 fw-bold text-secondary w-50 text-end">Localisation</span>
-              <span className="w-50">{craftsman.localisation}</span>
+              <span className="w-50">{craftsman.City.name}</span>
             </div>
             <div className="text-center">
               <a className="btn btn-primary rounded-pill">

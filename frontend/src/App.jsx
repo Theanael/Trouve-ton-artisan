@@ -3,6 +3,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router'
 import { useState, useEffect } from 'react'
+import ListByCategory from './pages/ListByCategory'
+import slugify from './utils/slugify'
 
 function App() {
 
@@ -21,6 +23,13 @@ function App() {
       <Header categories={categories} />
       <Routes>
         <Route path='/' element={<Home />}/>
+        {categories.map((category => {
+          return (
+          <Route 
+            path={'/category/'+slugify(category.name)} 
+            element={<ListByCategory  category={category}/>}
+          />)
+        }))}
       </Routes>
       <Footer />
     </>
