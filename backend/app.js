@@ -7,9 +7,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const sequelize = require('./db/MySQL')
 
+const cors = require('cors')
 
 const app = express();
 
+app.use(cors({
+    origin: 'http://localhost:5173'
+}))
 
 sequelize.initClientDbConnection()
 
