@@ -2,16 +2,19 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router'
+import { useState, useEffect } from 'react'
 
 function App() {
 
-  // Temp Static Categories
-  const categories=[
-    {id:1,name:'Alimentation'},
-    {id:2,name:'Batiment'},
-    {id:3,name:'Fabrication'},
-    {id:4,name:'Service'},
-    ]
+  const [categories,setCategories] =  useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/category')
+    .then(response => response.json())
+    .then((data) => {
+      setCategories(data)
+    })
+  },[])
   
   return (
     <>
