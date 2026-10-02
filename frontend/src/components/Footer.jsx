@@ -15,7 +15,7 @@ function Footer() {
                 <div >69269 LYON CEDEX 02</div>
                 <div>France</div>
                 <div className="d-flex align-items-center">
-                    <i class="bi bi-telephone fs-3"></i>
+                    <i className="bi bi-telephone fs-3"></i>
                     +33 (0)4 26 73 40 00
                 </div>
             </div>
