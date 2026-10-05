@@ -1,9 +1,10 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
+
 import Home from './pages/Home'
 import ListByCategory from './pages/ListByCategory'
 import CraftsmanPage from './pages/Craftsman'
-
+import WIP from './pages/WIP'
 import { Route, Routes } from 'react-router'
 import { useState, useEffect } from 'react'
 
@@ -27,6 +28,8 @@ function App() {
       setCraftsmen(data)
     })
   },[])
+
+
   
   return (
     <>
@@ -51,6 +54,13 @@ function App() {
         }
 
         )}
+
+        <Route path='/mentions-legales' element={<WIP/>}/>
+        <Route path='/donnees-personnelles' element={<WIP/>}/>
+        <Route path='/declaration-daccessibilite' element={<WIP/>}/>
+        <Route path='/politique-des-cookies' element={<WIP/>}/>
+        <Route path='/gestion-des-cookies' element={<WIP/>}/>
+        
       </Routes>
       <Footer />
     </>
