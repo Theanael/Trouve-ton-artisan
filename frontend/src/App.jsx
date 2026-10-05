@@ -1,9 +1,11 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
+
 import Home from './pages/Home'
 import ListByCategory from './pages/ListByCategory'
 import CraftsmanPage from './pages/Craftsman'
-
+import WIP from './pages/WIP'
+import Error404 from './pages/404'
 import { Route, Routes } from 'react-router'
 import { useState, useEffect } from 'react'
 
@@ -27,31 +29,43 @@ function App() {
       setCraftsmen(data)
     })
   },[])
+
+
   
   return (
     <>
       <Header categories={categories} />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        {categories.map(category => {
-          return (
-            <Route 
-              path={'/category/'+slugify(category.name)} 
-              element={<ListByCategory  category={category}/>}
-            />
-        )
-        })}
-        {craftsmen.map(craftsman => {
-          return (
-            <Route 
-            path={'/craftsman/'+slugify(craftsman.name)}
-            element={<CraftsmanPage  craftsman={craftsman}/>}
-            />
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          {categories.map(category => {
+            return (
+              <Route 
+                path={'/category/'+slugify(category.name)} 
+                element={<ListByCategory  category={category}/>}
+              />
           )
-        }
+          })}
+          {craftsmen.map(craftsman => {
+            return (
+              <Route 
+              path={'/craftsman/'+slugify(craftsman.name)}
+              element={<CraftsmanPage  craftsman={craftsman}/>}
+              />
+            )
+          }
 
-        )}
-      </Routes>
+          )}
+
+          <Route path='/mentions-legales' element={<WIP/>}/>
+          <Route path='/donnees-personnelles' element={<WIP/>}/>
+          <Route path='/declaration-daccessibilite' element={<WIP/>}/>
+          <Route path='/politique-des-cookies' element={<WIP/>}/>
+          <Route path='/gestion-des-cookies' element={<WIP/>}/>
+          <Route path='*' element={<Error404/>}/>
+
+        </Routes>
+      </main>
       <Footer />
     </>
   )

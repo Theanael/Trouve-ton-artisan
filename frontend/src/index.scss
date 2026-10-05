@@ -29,6 +29,17 @@ $light: #f1f8fc;
 
 body{
     font-family: Graphik;
+    min-height: 100vh;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex:1;
 }
 
 main,footer{

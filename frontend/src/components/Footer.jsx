@@ -1,4 +1,5 @@
 import './Footer.scss'
+import { Link } from 'react-router'
 
 function Footer() {
     
@@ -22,11 +23,11 @@ function Footer() {
             
         </section>
         <section className="d-flex flex-wrap gap-3 justify-content-center py-3 flex-lg-column">
-            <a className="text-white" href="">Mentions legales</a>
-            <a className="text-white" href="">Donnees personnelles</a>
-            <a className="text-white" href="">Accessibilite : partiellement conforme</a>
-            <a className="text-white" href="">Politique des cookies</a>
-            <a className="text-white" href="">Gestion des cookies</a>
+            <Link to="/mentions-legales" className="text-white" >Mentions legales</Link>
+            <Link to="/donnees-personnelles" className="text-white">Donnees personnelles</Link>
+            <Link to="/declaration-daccessibilite" className="text-white">Accessibilite : partiellement conforme</Link>
+            <Link to="/politique-des-cookies" className="text-white">Politique des cookies</Link>
+            <Link to="/gestion-des-cookies" className="text-white">Gestion des cookies</Link>
         </section>
     </footer>
   )
