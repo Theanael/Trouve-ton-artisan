@@ -11,7 +11,7 @@ function Error404() {
         </p>
         <img
             src="https://www.auvergnerhonealpes.fr/sites/default/files/styles/480w/public/2024-12/ERREUR%20404-VISU.jpg?itok=RpxXXFKC"
-            class="img-fluid w-100"
+            className="img-fluid w-100"
             alt=""
         />
     </div>
