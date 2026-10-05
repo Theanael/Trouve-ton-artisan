@@ -1,4 +1,7 @@
+import slugify from "../utils/slugify"
 import StarNotes from "./StarNotes"
+
+import { Link } from "react-router"
 
 function CraftsmanCard(props) {
     const craftsman=props.craftsman
@@ -18,9 +21,10 @@ function CraftsmanCard(props) {
               <span className="w-50">{craftsman.City.name}</span>
             </div>
             <div className="text-center">
-              <a className="btn btn-primary rounded-pill">
+              <Link to={'/craftsman/'+slugify(craftsman.name)} 
+              className="btn btn-primary rounded-pill">
                 En savoir plus
-              </a>
+              </Link>
               
             </div>
         </div>

@@ -1,5 +1,14 @@
 const services = require('../services/craftsman');
 
+exports.getAll = async (req,res) => {
+    try {
+        const categories=await services.getAll()
+        return res.status(200).json(categories);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
+
 exports.getById = async (req,res) => {
     const id = req.params.id
 

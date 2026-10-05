@@ -1,5 +1,12 @@
 const {Category, City, Speciality,Craftsman } = require('../models/associations')
 
+exports.getAll = async () => {
+    const craftsmen = await Craftsman.findAll({
+        attributes: ['id', 'name']
+    });
+    return craftsmen;
+
+}
 
 exports.getById = async (id) => {
     const craftsman = await Craftsman.findByPk(id,{
