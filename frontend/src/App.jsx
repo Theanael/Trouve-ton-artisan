@@ -35,35 +35,37 @@ function App() {
   return (
     <>
       <Header categories={categories} />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        {categories.map(category => {
-          return (
-            <Route 
-              path={'/category/'+slugify(category.name)} 
-              element={<ListByCategory  category={category}/>}
-            />
-        )
-        })}
-        {craftsmen.map(craftsman => {
-          return (
-            <Route 
-            path={'/craftsman/'+slugify(craftsman.name)}
-            element={<CraftsmanPage  craftsman={craftsman}/>}
-            />
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          {categories.map(category => {
+            return (
+              <Route 
+                path={'/category/'+slugify(category.name)} 
+                element={<ListByCategory  category={category}/>}
+              />
           )
-        }
+          })}
+          {craftsmen.map(craftsman => {
+            return (
+              <Route 
+              path={'/craftsman/'+slugify(craftsman.name)}
+              element={<CraftsmanPage  craftsman={craftsman}/>}
+              />
+            )
+          }
 
-        )}
+          )}
 
-        <Route path='/mentions-legales' element={<WIP/>}/>
-        <Route path='/donnees-personnelles' element={<WIP/>}/>
-        <Route path='/declaration-daccessibilite' element={<WIP/>}/>
-        <Route path='/politique-des-cookies' element={<WIP/>}/>
-        <Route path='/gestion-des-cookies' element={<WIP/>}/>
-        <Route path='*' element={<Error404/>}/>
+          <Route path='/mentions-legales' element={<WIP/>}/>
+          <Route path='/donnees-personnelles' element={<WIP/>}/>
+          <Route path='/declaration-daccessibilite' element={<WIP/>}/>
+          <Route path='/politique-des-cookies' element={<WIP/>}/>
+          <Route path='/gestion-des-cookies' element={<WIP/>}/>
+          <Route path='*' element={<Error404/>}/>
 
-      </Routes>
+        </Routes>
+      </main>
       <Footer />
     </>
   )
