@@ -20,14 +20,12 @@ function ListByCat(props) {
 
   return (
     <>
-      <main >
-        <h2 className='h1 fw-bold  text-secondary'>{category.name}</h2>
-        <div className='d-flex flex-wrap justify-content-center gap-3'>
-            {craftsmen.map((craftsman) => {
-                    return (<CraftsmanCard craftsman={craftsman} />)
-            })}
-        </div>
-      </main>
+      <h2 className='h1 fw-bold  text-secondary'>{category.name}</h2>
+      <div className='d-flex flex-wrap justify-content-center gap-3 py-3'>
+          {craftsmen.map((craftsman) => {
+                  return (<CraftsmanCard craftsman={craftsman} />)
+          })}
+      </div>
     </>
   )
 }

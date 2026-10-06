@@ -37,8 +37,9 @@ function CraftsmanPage(props) {
       <StarNotes note={craftsman.note}/>
       <img
         src={'/src/assets/images/craftsman/'+slugify(craftsman.name)+'.jpg'}
-        className=" w-100 img-fluid "
+        className=" w-100 img-fluid object-fit-contain bg-light my-3"
         alt=""
+        style={{height:"40vh"}}
         onError={(error) => { //Si l'image n'existe pas, on utilise l'image par défaut
           error.currentTarget.onerror=null
           error.currentTarget.src="/src/assets/images/placeholder.jpg"

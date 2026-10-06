@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <Header categories={categories} />
-      <main>
+      <main className='d-flex flex-column justify-content-center'>
         <Routes>
           <Route path='/' element={<Home />}/>
           {categories.map(category => {
