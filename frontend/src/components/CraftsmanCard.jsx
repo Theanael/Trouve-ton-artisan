@@ -13,7 +13,7 @@ function CraftsmanCard(props) {
         <div className="card-body py-1 d-flex justify-content-around flex-column gap-2">
           <StarNotes note={craftsman.note}/>
             <div className="d-flex gap-3 justify-content-center">
-              <span className="h5 fw-bold text-secondary w-50 text-end">Specialite</span>
+              <span className="h5 fw-bold text-secondary w-50 text-end">Spécialité</span>
               <span className="w-50">{craftsman.Speciality.name}</span>
             </div>
             <div className="d-flex gap-3 justify-content-center">

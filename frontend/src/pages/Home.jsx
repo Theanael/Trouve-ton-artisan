@@ -21,7 +21,7 @@ function Home() {
           <h3 className='h4'>
             <li>Choisir la categorie d’artisanat dans le menu</li>
           </h3>
-          <div>Selectionnez la categorie correspondant au metier que vous recherchez.</div>
+          <div>Sélectionnez la catégorie correspondant au métier que vous recherchez.</div>
         <h3 className='h4'>
           <li>Choisir un artisan</li>
           </h3>
@@ -29,9 +29,9 @@ function Home() {
         <h3 className='h4'>
           <li>Contacter l’artisan choisi via le formulaire de contact</li>
         </h3>
-          <div>Envoyez votre demande directement à l'artisan grace au formulaire de contact.</div>
+          <div>Envoyez votre demande directement à l'artisan grâce au formulaire de contact.</div>
         <h3 className='h4'>
-          <li>Une reponse sera apportee sous 48h.</li>
+          <li>Une réponse sera apportée sous 48h.</li>
         </h3>
           <div>L'artisan recevra votre demande et pourra vous repondre directement.</div>
         </ol>

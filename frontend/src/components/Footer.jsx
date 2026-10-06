@@ -9,7 +9,7 @@ function Footer() {
             
             <div className="d-flex flex-column gap-1 separator">
                 <div className="fw-bold">
-                    Conseil regional Auvergne-Rhone-Alpes Antenne de Lyon
+                    Conseil régional Auvergne-Rhône-Alpes Antenne de Lyon
                 </div>
                 <div >101 cours Charlemagne</div>
                 <div >CS 20033</div>
@@ -23,8 +23,8 @@ function Footer() {
             
         </section>
         <section className="d-flex flex-wrap gap-3 justify-content-center py-3 flex-lg-column">
-            <Link to="/mentions-legales" className="text-white" >Mentions legales</Link>
-            <Link to="/donnees-personnelles" className="text-white">Donnees personnelles</Link>
+            <Link to="/mentions-legales" className="text-white" >Mentions légales</Link>
+            <Link to="/donnees-personnelles" className="text-white">Donneées personnelles</Link>
             <Link to="/declaration-daccessibilite" className="text-white">Accessibilite : partiellement conforme</Link>
             <Link to="/politique-des-cookies" className="text-white">Politique des cookies</Link>
             <Link to="/gestion-des-cookies" className="text-white">Gestion des cookies</Link>

@@ -23,10 +23,15 @@ function CraftsmanPage(props) {
 
   if (craftsman.website){
     siteLine=
-    <div className="d-flex gap-3 justify-content-center">
-      <span className="h5 fw-bold text-secondary text-nowrap text-end">Site</span>
-      <span className="w-100"><a href={craftsman.website}>{craftsman.website}</a></span>
-    </div>;
+      <div className="row g-2">
+          <span className="col-2 h5 fw-bold text-secondary text-end mb-0">
+              Site
+          </span>
+          <span className="col-10">
+              <a className='text-break'
+              href={craftsman.website}>{craftsman.website}</a>
+          </span>
+      </div>
   }
     
 
@@ -47,14 +52,21 @@ function CraftsmanPage(props) {
         }}  
       />
       
-      <div className="d-flex gap-3 justify-content-center">
-          <span className="h5 fw-bold text-secondary w-25 text-end">Specialite</span>
-          <span className="w-100">{craftsman.Speciality.name}</span>
-      </div>
-      <div className="d-flex gap-3 justify-content-center">
-          <span className="h5 fw-bold text-secondary w-25 text-end">Localisation</span>
-          <span className="w-100">{craftsman.City.name}</span>
-      </div>
+<div className="row g-2">
+    <span className="col-5 col-sm-2 h5 fw-bold text-secondary text-end mb-0">
+        Spécialité
+    </span>
+    <span className="col-7 col-sm-10">
+        {craftsman.Speciality.name}
+    </span>
+
+    <span className="col-5 col-sm-2 h5 fw-bold text-secondary text-end mb-0">
+        Localisation
+    </span>
+    <span className="col-7 col-sm-10">
+        {craftsman.City.name}
+    </span>
+</div>
 
       
 
