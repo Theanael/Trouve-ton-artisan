@@ -28,7 +28,7 @@ $light: #f1f8fc;
 @import "bootstrap/scss/bootstrap";
 
 body{
-    font-family: Graphik;
+    font-family: Graphik,sans-serif;
     min-height: 100vh;
 }
 
@@ -39,6 +39,7 @@ body{
 }
 
 main{
+    height: 100%;
     flex:1;
 }
 
