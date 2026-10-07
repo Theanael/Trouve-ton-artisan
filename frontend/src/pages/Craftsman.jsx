@@ -5,13 +5,16 @@ import StarNotes from '../components/StarNotes';
 import slugify from '../utils/slugify';
 import CraftsmanForm from '../components/CraftsmanForm';
 
+
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function CraftsmanPage(props) {
 
   const id=props.craftsman.id
   const [craftsman, setCraftsman] = useState({name:"",Speciality:{},City:{}});
   
   useEffect(() => {
-    fetch('http://localhost:3000/craftsman/'+id)
+    fetch(apiUrl+'/craftsman/'+id)
         .then(response => response.json())
         .then(data => {
             console.log(data)

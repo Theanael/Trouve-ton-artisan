@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import CraftsmanCard from '../components/CraftsmanCard'
 
+
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function Home() {
 
   const [craftsmen,setCraftsmen] = useState([])
   
   useEffect(() => {
-    fetch('http://localhost:3000/craftsman/top')
+    fetch(apiUrl+'/craftsman/top')
       .then(response => response.json())
       .then((data) => {
         setCraftsmen(data)
