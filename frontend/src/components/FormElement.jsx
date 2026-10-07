@@ -14,13 +14,13 @@ function FormElement(props) {
         </label>
         {
         (type!="textarea") &&
-         <input className={className+' rounded-pill'} 
+         <input onChange={props.onChange} className={className+' rounded-pill'} 
         type={type} name={name} id={name}/>
         }
 
         {
         (type=="textarea") && 
-        <textarea className={className+' rounded-4'} style={{height:'128px'}} 
+        <textarea onChange={props.onChange} className={className+' rounded-4'} style={{height:'128px'}} 
         type={type} name={name} id={name}></textarea>
         }
     </div>

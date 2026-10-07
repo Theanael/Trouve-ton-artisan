@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import StarNotes from '../components/StarNotes';
-import FormElement from '../components/FormElement';
 
 import slugify from '../utils/slugify';
+import CraftsmanForm from '../components/CraftsmanForm';
 
 function CraftsmanPage(props) {
 
@@ -83,15 +83,7 @@ function CraftsmanPage(props) {
       <hr className='border border-2 border-secondary opacity-100' />
       
       <section>
-        <h2 className='h2 fw-medium  text-secondary gap-10'>Contacter cet artisan</h2>
-        <p>Une question, une demande de prestation ou de tarif ? Contactez directement cet artisan</p>
-        <FormElement name="name" label="Nom" required={true} type="text"/>
-        <FormElement name="email" label="Email" required={true} type="email"/>
-        <FormElement name="topic" label="Objet" required={true} type="text"/>
-        <FormElement name="message" label="Message" required={true} type="textarea"/>
-        <div className='d-flex justify-content-center p-2'>
-          <input className="btn btn-primary rounded-pill" type="submit" value="Envoyer" />
-        </div>
+        <CraftsmanForm />
       </section>
       
       
