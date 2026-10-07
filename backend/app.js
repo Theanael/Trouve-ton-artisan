@@ -11,9 +11,11 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(cors({
-    origin: 'http://localhost:5173'
-}))
+const cors_origins = process.env.CORS_ORIGINS.split(',');
+
+app.use(cors({origin: [cors_origins]}));
+
+
 
 sequelize.initClientDbConnection()
 
