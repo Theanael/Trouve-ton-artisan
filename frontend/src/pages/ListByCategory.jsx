@@ -26,7 +26,7 @@ function ListByCat(props) {
       <div className='d-flex flex-wrap justify-content-start align-content-start flex-grow-1
        gap-3 py-3'>
           {craftsmen.map((craftsman) => {
-                  return (<CraftsmanCard craftsman={craftsman} />)
+                  return (<CraftsmanCard craftsman={craftsman} key={craftsman.id}/>)
           })}
       </div>
     </>
