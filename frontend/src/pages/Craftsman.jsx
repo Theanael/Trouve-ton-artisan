@@ -18,6 +18,7 @@ function CraftsmanPage(props) {
         .then(response => response.json())
         .then(data => {
             console.log(data)
+            data.img=import('./src/assets/images/craftsman/'+slugify(craftsman.name)+'.jpg');
             setCraftsman(data);
         });
   }, [id]);
@@ -44,7 +45,7 @@ function CraftsmanPage(props) {
       <h2 className='h1 fw-medium text-primary'>{craftsman.name}</h2>
       <StarNotes note={craftsman.note}/>
       <img
-        src={'/src/assets/images/craftsman/'+slugify(craftsman.name)+'.jpg'}
+        src={craftsman.img}
         className=" w-100 img-fluid object-fit-contain bg-light my-3"
         alt=""
         style={{height:"40vh"}}
