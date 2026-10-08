@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import FormToast from './FormToast';
 import FormElement from './FormElement';
 
 function CraftsmanForm() {
 
-  const [formData,setFormData]=useState({name:"",email:"",topic:"",message:""})
-  const [messages,setMessages]=useState([])
+  const [formData,setFormData]=useState({name:"",email:"",topic:"",message:""});
+  const [messages,setMessages]=useState([]);
   
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -14,41 +14,41 @@ function CraftsmanForm() {
         ...formData,
         [name]: value
         
-    })
+    });
   };
 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         
-        console.log(formData)
-        const newMessages=[]
+        const newMessages=[];
 
         
         // si le champs nom est vide on renvoie une erreur
         if(!formData.name){
-            newMessages.push({type:"error",message:"le Nom ne peut pas être vide."})
+            newMessages.push({type:"error",message:"le Nom ne peut pas être vide."});
         }
 
         
-        // si l'email est vide on renvoie une erreur (le format est géré nativement par le type="email")
+        // Vérifie uniquement que l'email est renseigné.
+        // La validation de son format est assurée nativement par le champ email.
         if(!formData.email){
-            newMessages.push({type:"error",message:"l'Email ne peut pas être vide."})
+            newMessages.push({type:"error",message:"l'Email ne peut pas être vide."});
         }
 
         // si l'objet est vide on renvoie une erreur
         if(!formData.topic){
-            newMessages.push({type:"error",message:"l'Objet ne peut pas être vide."})
+            newMessages.push({type:"error",message:"l'Objet ne peut pas être vide."});
         }
 
         // si le message est vide on renvoie une erreur
         if(!formData.message){
-            newMessages.push({type:"error",message:"le Message ne peut pas être vide."})
+            newMessages.push({type:"error",message:"le Message ne peut pas être vide."});
         }
         
         if (newMessages.length==0){
-            // ajouter l'appel API pour envoyer le message ici.
-            newMessages.push({type:"success",message:"Message envoyé avec succès ! vous serez recontacté sous 48h."})
+            // TODO : ajouter l'appel API pour envoyer le message ici.
+            newMessages.push({type:"success",message:"Message envoyé avec succès ! vous serez recontacté sous 48h."});
 
         }
         
@@ -70,7 +70,7 @@ function CraftsmanForm() {
         <FormElement name="message" label="Message" required={true} onChange={handleChange} type="textarea"/>
         <div className='d-flex flex-column gap-2'>
             {messages.map((message,index)=>{
-                let title,color
+                let title,color;
                 switch (message.type) {
                     case "error":
                         title="Erreur";
@@ -89,7 +89,7 @@ function CraftsmanForm() {
         </div>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default CraftsmanForm
+export default CraftsmanForm;

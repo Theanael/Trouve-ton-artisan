@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react'
-import CraftsmanCard from '../components/CraftsmanCard'
+import { useState, useEffect } from 'react';
+import CraftsmanCard from '../components/CraftsmanCard';
 
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 function Home() {
 
-  const [craftsmen,setCraftsmen] = useState([])
+  const [craftsmen,setCraftsmen] = useState([]);
   
   useEffect(() => {
     fetch(apiUrl+'/craftsman/top')
       .then(response => response.json())
       .then((data) => {
         setCraftsmen(data)
-      })
+      });
 
   },[]);
   return (
@@ -49,8 +49,8 @@ function Home() {
           
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 

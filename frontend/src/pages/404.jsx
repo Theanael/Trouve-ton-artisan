@@ -1,5 +1,6 @@
 function Error404() {
 
+// J'ai repris la formulation et l'image utilisées sur le site officiel de la région.
 
   return (
     <>
@@ -17,7 +18,7 @@ function Error404() {
     </div>
            
     </>
-  )
-}
+  );
+};
 
-export default Error404
+export default Error404;

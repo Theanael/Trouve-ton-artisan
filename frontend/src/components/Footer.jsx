@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 
 function Footer() {
     
@@ -30,7 +30,7 @@ function Footer() {
             <Link to="/gestion-des-cookies" className="text-white">Gestion des cookies</Link>
         </section>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

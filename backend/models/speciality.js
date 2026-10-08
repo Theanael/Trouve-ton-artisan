@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const {sequelize} = require('../db/MySQL')
+const {sequelize} = require('../db/MySQL');
 
 const Speciality = sequelize.define('speciality',{
     id:{
@@ -14,6 +14,6 @@ const Speciality = sequelize.define('speciality',{
 },
 {
     timestamps:false
-})
+});
 
-module.exports=Speciality
+module.exports=Speciality;

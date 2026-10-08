@@ -10,14 +10,13 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 function CraftsmanPage(props) {
 
-  const id=props.craftsman.id
+  const id=props.craftsman.id;
   const [craftsman, setCraftsman] = useState({name:"",speciality:{},city:{}});
   
   useEffect(() => {
     fetch(apiUrl+'/craftsman/'+id)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             data.img=import('./src/assets/images/craftsman/'+slugify(craftsman.name)+'.jpg');
             setCraftsman(data);
         });
@@ -91,7 +90,7 @@ function CraftsmanPage(props) {
       
       
     </>
-  )
-}
+  );
+};
 
-export default CraftsmanPage
+export default CraftsmanPage;

@@ -1,8 +1,8 @@
 function FormToast(props) {
 
-    const color=props.color
-    const title=props.title
-    const message=props.message
+    const color=props.color;
+    const title=props.title;
+    const message=props.message;
 
     return(
     <>
@@ -16,7 +16,7 @@ function FormToast(props) {
             </div>
         </div> 
     </> 
-    )
-}
+    );
+};
 
-export default FormToast
+export default FormToast;

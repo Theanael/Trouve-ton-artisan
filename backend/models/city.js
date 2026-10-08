@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const {sequelize} = require('../db/MySQL')
+const {sequelize} = require('../db/MySQL');
 
 const City = sequelize.define('city',{
     id:{
@@ -14,6 +14,6 @@ const City = sequelize.define('city',{
 },
 {
     timestamps:false
-})
+});
 
-module.exports=City
+module.exports=City;

@@ -1,4 +1,4 @@
-const {Category, City, Speciality,Craftsman } = require('../models/associations')
+const {City, Speciality,Craftsman } = require('../models/associations');
 
 exports.getAll = async () => {
     const craftsmen = await Craftsman.findAll({
@@ -6,14 +6,14 @@ exports.getAll = async () => {
     });
     return craftsmen;
 
-}
+};
 
 exports.getById = async (id) => {
     const craftsman = await Craftsman.findByPk(id,{
         include:[City,Speciality]
     });
     return craftsman;
-}
+};
 
 
 
@@ -26,7 +26,7 @@ exports.getTop = async () => {
         }
     });
     return craftsmen;
-}
+};
 
 exports.getByCategory = async (categoryId) => {
     const craftsmen = await Craftsman.findAll({

@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const {sequelize} = require('../db/MySQL')
+const {sequelize} = require('../db/MySQL');
 
 const Category = sequelize.define('category',{
     id:{
@@ -14,6 +14,6 @@ const Category = sequelize.define('category',{
 },
 {
     timestamps:false
-})
+});
 
-module.exports=Category
+module.exports=Category;

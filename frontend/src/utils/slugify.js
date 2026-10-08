@@ -1,3 +1,4 @@
+// fonction visant à formater du texte pour qu'il puisse être intégré à un url.
 function slugify(text) {
   return text
     .normalize('NFD')

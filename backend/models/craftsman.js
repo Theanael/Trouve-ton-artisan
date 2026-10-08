@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const {sequelize} = require('../db/MySQL')
+const {sequelize} = require('../db/MySQL');
 
 const Craftsman = sequelize.define('craftsman',{
     id:{
@@ -46,6 +46,6 @@ const Craftsman = sequelize.define('craftsman',{
 {
     timestamps:false,
     tableName:'craftsmen'
-})
+});
 
-module.exports=Craftsman
+module.exports=Craftsman;

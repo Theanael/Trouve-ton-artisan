@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import CraftsmanCard from '../components/CraftsmanCard'
+import CraftsmanCard from '../components/CraftsmanCard';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 function ListByCat(props) {
 
-  const category=props.category
+  const category=props.category;
 
     const [craftsmen, setCraftsmen] = useState([]);
 
@@ -14,7 +14,6 @@ function ListByCat(props) {
         fetch(apiUrl+'/craftsman/category/'+category.id)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 setCraftsmen(data);
             });
     }, [category.id]);
@@ -30,8 +29,8 @@ function ListByCat(props) {
           })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ListByCat
+export default ListByCat;
 

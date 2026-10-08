@@ -1,7 +1,7 @@
-import slugify from "../utils/slugify"
-import StarNotes from "./StarNotes"
+import slugify from "../utils/slugify";
+import StarNotes from "./StarNotes";
 
-import { Link } from "react-router"
+import { Link } from "react-router";
 
 function CraftsmanCard(props) {
     const craftsman=props.craftsman
@@ -37,7 +37,7 @@ function CraftsmanCard(props) {
         </div>
         
     </div>
-  )
-}
+  );
+};
 
-export default CraftsmanCard
+export default CraftsmanCard;
