@@ -51,7 +51,6 @@ function CraftsmanPage(props) {
         onError={(error) => { //Si l'image n'existe pas, on utilise l'image par défaut
           error.currentTarget.onerror=null
           error.currentTarget.src="/src/assets/images/placeholder.jpg"
-          console.log("Test ",error.currentTarget)
         }}  
       />
       
@@ -60,14 +59,14 @@ function CraftsmanPage(props) {
         Spécialité
     </span>
     <span className="col-7 col-sm-10">
-        {craftsman.Speciality.name}
+        {craftsman.speciality.name}
     </span>
 
     <span className="col-5 col-sm-2 h5 fw-bold text-secondary text-end mb-0">
         Localisation
     </span>
     <span className="col-7 col-sm-10">
-        {craftsman.City.name}
+        {craftsman.city.name}
     </span>
 </div>
 
