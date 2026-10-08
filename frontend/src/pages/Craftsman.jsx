@@ -11,7 +11,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 function CraftsmanPage(props) {
 
   const id=props.craftsman.id
-  const [craftsman, setCraftsman] = useState({name:"",Speciality:{},City:{}});
+  const [craftsman, setCraftsman] = useState({name:"",speciality:{},city:{}});
   
   useEffect(() => {
     fetch(apiUrl+'/craftsman/'+id)
