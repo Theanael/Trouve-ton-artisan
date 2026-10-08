@@ -4,16 +4,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 const sequelize = require('./db/MySQL')
 
 const cors = require('cors')
 
 const app = express();
 
-app.use(cors({
-    origin: 'http://localhost:5173'
-}))
+const cors_origins = process.env.CORS_ORIGINS.split(',');
+
+app.use(cors({origin: [cors_origins]}));
+
+
 
 sequelize.initClientDbConnection()
 
@@ -25,6 +26,5 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 module.exports = app;

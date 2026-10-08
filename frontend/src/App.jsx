@@ -1,11 +1,18 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
+const apiUrl = import.meta.env.VITE_API_URL;
+
+
 import Home from './pages/Home'
 import ListByCategory from './pages/ListByCategory'
 import CraftsmanPage from './pages/Craftsman'
 import WIP from './pages/WIP'
 import Error404 from './pages/404'
+
+
+
 import { Route, Routes } from 'react-router'
 import { useState, useEffect } from 'react'
 
@@ -17,13 +24,13 @@ function App() {
   const [craftsmen,setCraftsmen] =  useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/category')
+    fetch(apiUrl+'/category')
     .then(response => response.json())
     .then((data) => {
       setCategories(data)
     })
 
-    fetch('http://localhost:3000/craftsman')
+    fetch(apiUrl+'/craftsman')
     .then(response => response.json())
     .then((data) => {
       setCraftsmen(data)
@@ -35,7 +42,7 @@ function App() {
   return (
     <>
       <Header categories={categories} />
-      <main>
+      <main className='d-flex flex-column justify-content-center'>
         <Routes>
           <Route path='/' element={<Home />}/>
           {categories.map(category => {
