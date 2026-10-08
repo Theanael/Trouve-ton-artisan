@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const {sequelize} = require('../db/MySQL')
 
-const City = sequelize.define('City',{
+const City = sequelize.define('city',{
     id:{
         type:DataTypes.INTEGER,
         autoIncrement: true,
