@@ -21,11 +21,11 @@ function CraftsmanCard(props) {
           <StarNotes note={craftsman.note}/>
             <div className="d-flex gap-3 justify-content-center flex-shrink-1">
               <span className="h5 fw-bold text-secondary w-50 text-end">Spécialité</span>
-              <span className="w-50">{craftsman.Speciality.name}</span>
+              <span className="w-50">{craftsman.speciality.name}</span>
             </div>
             <div className="d-flex gap-3 justify-content-center flex-shrink-1">
               <span className="h5 fw-bold text-secondary w-50 text-end">Localisation</span>
-              <span className="w-50">{craftsman.City.name}</span>
+              <span className="w-50">{craftsman.city.name}</span>
             </div>
             <div className="text-center align-text-bottom">
               <Link to={'/craftsman/'+slugify(craftsman.name)} 
