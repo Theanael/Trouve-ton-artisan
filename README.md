@@ -3,8 +3,8 @@
 ## Prérequis
 
 - Node.js et npm installés.
-- MySQL ou MariaDB installé et démarré.
-- Git, pour récupérer le dépôt.
+- MySQL installé et démarré.
+- Git pour récupérer le dépôt.
 - Un navigateur web.
 
 ## Installation
@@ -12,11 +12,9 @@
 ### 1. Récupérer le projet
 
 ```bash
-git clone <URL_DU_DEPOT_GITHUB>
+git clone https://github.com/Theanael/Trouve-ton-artisan/edit/main/README.md
 cd trouve-ton-artisan
 ```
-
-Remplacer `<URL_DU_DEPOT_GITHUB>` par l'adresse du dépôt GitHub.
 
 ### 2. Installer les dépendances
 
@@ -34,20 +32,24 @@ cd backend
 npm install
 ```
 
-### 3. Configurer la base de données
+### 3. Configurer la base de données et des variables d'environnement.
 
-- Démarrer MySQL ou MariaDB.
+#### Base de donnée
+- Démarrer MySQL.
 - Créer la base de données utilisée par le projet.
-- Exécuter le script SQL de création et de peuplement fourni dans le dépôt, s'il est présent.
-- Configurer les identifiants de connexion à la base de données dans le fichier d'environnement attendu par le backend.
+- Exécuter les scripts SQL de création et de peuplement fourni dans le dépôt.
 
-Si le frontend utilise une variable d'environnement pour l'adresse de l'API, vérifier qu'elle pointe vers le backend local, par exemple :
+#### Variables d'environnement
 
-```dotenv
-VITE_API_URL=http://localhost:3000
-```
+A l'aide des deux fichiers `.env.example` fournis, créer des fichiers `.env` aux même emplacement et remplacer les valeurs comme suit :
 
-Le nom de la variable doit correspondre à celui utilisé dans le code.
+- DB_NAME, DB_USER, DB_PASSWORD, DB_HOST et DB_PORT définissent les paramètres de connexion à MySQL.
+
+- CORS_ORIGINS liste les origines autorisées à effectuer des requêtes vers l'API (au minimum le frontend).
+
+- VITE_API_URL indique au frontend l'adresse du backend.
+
+
 
 ## Lancement
 
@@ -60,13 +62,7 @@ cd backend
 npm run dev
 ```
 
-Si le script `dev` n'existe pas dans le `package.json`, utiliser le script de démarrage qui y est défini, par exemple :
-
-```bash
-npm start
-```
-
-L'API est généralement disponible à l'adresse `http://localhost:3000`, selon la configuration du projet.
+L'API devrait être disponible à l'adresse `http://localhost:3000`.
 
 ### 2. Lancer le frontend
 
