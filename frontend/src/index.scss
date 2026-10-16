@@ -28,7 +28,7 @@ $light: #f1f8fc;
 @import "bootstrap/scss/bootstrap";
 
 body{
-    font-family: Graphik,sans-serif;
+    font-family: Graphik,sans-serif; // la police Graphik Trial ne gérant pas les accents, on doit utiliser un fallback
     min-height: 100vh;
 }
 

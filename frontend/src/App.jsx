@@ -1,17 +1,13 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-
 const apiUrl = import.meta.env.VITE_API_URL;
-
 
 import Home from './pages/Home'
 import ListByCategory from './pages/ListByCategory'
 import CraftsmanPage from './pages/Craftsman'
 import WIP from './pages/WIP'
 import Error404 from './pages/404'
-
-
 
 import { Route, Routes } from 'react-router'
 import { useState, useEffect } from 'react'
@@ -53,6 +49,7 @@ function App() {
               />
           )
           })}
+
           {craftsmen.map(craftsman => {
             return (
               <Route 
@@ -69,6 +66,7 @@ function App() {
           <Route path='/declaration-daccessibilite' element={<WIP/>}/>
           <Route path='/politique-des-cookies' element={<WIP/>}/>
           <Route path='/gestion-des-cookies' element={<WIP/>}/>
+          
           <Route path='*' element={<Error404/>}/>
 
         </Routes>

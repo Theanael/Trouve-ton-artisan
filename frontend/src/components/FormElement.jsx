@@ -1,18 +1,18 @@
 
 function FormElement(props) {
-    const label=props.label
-    const name=props.name
-    const required=props.required
-    const type=props.type
+    const label=props.label;
+    const name=props.name;
+    const required=props.required;
+    const type=props.type;
 
-    const className="text-primary fw-medium form-control py-1 px-4 border-primary bg-light"
+    const className="text-primary fw-medium form-control py-1 px-4 border-primary bg-light";
   return (
 
     <div className="d-flex flex-column p-2 gap-2">
         <label htmlFor={name}>
             {label}{required && <span className="text-danger fs-5">*</span>}
         </label>
-        {
+        { //on gère le cas du textarea (ultérieurement on pourrait aussi rajouter le cas du select.)
         (type!="textarea") &&
          <input onChange={props.onChange} className={className+' rounded-pill'} 
         type={type} name={name} id={name}/>
@@ -24,7 +24,7 @@ function FormElement(props) {
         type={type} name={name} id={name}></textarea>
         }
     </div>
-  )
-}
+  );
+};
 
-export default FormElement
+export default FormElement;

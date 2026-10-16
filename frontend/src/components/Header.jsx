@@ -1,6 +1,6 @@
-import { Link } from "react-router"
-import slugify from '../utils/slugify'
-import logo from "../assets/images/Logo.png"
+import { Link } from "react-router";
+import slugify from '../utils/slugify';
+import logo from "../assets/images/Logo.png";
 
 function Header(props) {
     const categories=props.categories ?? []
@@ -28,8 +28,8 @@ function Header(props) {
             </div>
         </nav>
     </header>
-  )
-}
+  );
+};
 
 
-export default Header
+export default Header;
