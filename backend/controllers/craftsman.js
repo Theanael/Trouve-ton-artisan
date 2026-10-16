@@ -10,13 +10,13 @@ const services = require('../services/craftsman');
 exports.getAll = async (req,res) => {
     try {
         // On essaie de récupérer la liste de tous les artisans et on vérfie qu'elle n'est pas vide.
-        const categories=await services.getAll();
+        const craftsmen=await services.getAll();
         if(craftsmen.length==0){
             return res.status(404).json({message:"no craftsmen were found"});
         }
         
         // sinon on renvoie la liste.
-        return res.status(200).json(categories);
+        return res.status(200).json(craftsmen);
     } catch (error) {
         return res.status(500).json(error);
     };
